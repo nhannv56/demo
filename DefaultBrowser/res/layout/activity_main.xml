@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.nhannv.defaultbrowser.MainActivity" >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <AutoCompleteTextView
+            android:id="@+id/url_type_am_act"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/clear_am_bt"
+            android:ems="10"
+            android:autoLink="web"
+            android:hint="Nhập địa chỉ web" >
+        </AutoCompleteTextView>
+
+        <Button
+            android:id="@+id/clear_am_bt"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignBaseline="@+id/url_type_am_act"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/ic_action_remove" />
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/web_view_act_wv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
